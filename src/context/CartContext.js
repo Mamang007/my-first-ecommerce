@@ -42,6 +42,12 @@ const cartsReducer = (carts, action) => {
       }
       break;
     }
+
+    case "clear": {
+      return [];
+      break;
+    }
+
     default:
       {
         throw Error("Error");
