@@ -1,0 +1,29 @@
+.product-list {
+  @apply w-full flex flex-wrap gap-3 mt-6;
+}
+
+.product-list__card-product {
+  @apply bg-white w-60 h-72 rounded-xl;
+}
+
+.product-list__card-product__image {
+  @apply relative w-full h-56 flex justify-center items-center;
+}
+
+.product-list__card-product__desc {
+  @apply p-4 flex justify-between;
+}
+.product-list__card-product__desc > h1 {
+  max-width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; /*Untuk membuat text yang kepanjangan menjadi titik-titik*/
+}
+
+.product-list__card-product__desc > button {
+  @apply bg-blue-600 text-white w-6 h-6 p-0 rounded-full duration-300;
+}
+
+.product-list__card-product__desc > button:hover {
+  filter: brightness(130%);
+}
