@@ -24,6 +24,7 @@ export default function Cart() {
   const eraseList = () => {
     dispatch({ type: "clear" });
   };
+
   const getTotalPrice = () => {
     let totalPrice = 0;
     for (let i = 0; i < carts.length; i++) {
@@ -44,6 +45,8 @@ export default function Cart() {
 
     try {
       const payload = {
+        // id: dibuat dari context transaction history length + 1
+        // no_order: dibuat dari T + random number 4 angka dan harus unique
         total_price: +getTotalPrice(),
         paid_amount: +payAmount, //'+' adalah cara cepat untuk mengubah menjadi number dibanding menggunakan number(payAmount)
         product,
@@ -81,7 +84,7 @@ export default function Cart() {
           );
         })}
       </div>
-      <div className="mt-12 text-center">
+      <div className="mt-3 text-center">
         <div className="flex justify-between">
           <p>Total Harga</p>
           <p>${getTotalPrice()},00</p>
